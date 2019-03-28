@@ -17,9 +17,15 @@
         }
 
         #wrapper header{
-            padding: 8px;
+            /*padding: 8px;*/
             text-align: center;
             background-color: pink;
+
+
+        }
+        #wrapper h2{
+            vertical-align: middle;
+
         }
 
         #menu {
@@ -37,6 +43,36 @@
         #menu a:hover {
             background-color: pink;
         }
+        {
+            box-sizing: border-box;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        .column {
+            float: left;
+            height: 100px; /* Should be removed. Only for demonstration */
+            font-size: 30px;
+
+        }
+
+        .left {
+            width: 200px;
+            background-color: white;
+        }
+
+        .right {
+            text-align: center;
+            width: 1000px;
+            background-color: pink;
+
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
 
     </style>
@@ -45,7 +81,20 @@
 
 <div id="wrapper">
     <header>
-    <h1>Logo</h1>
+
+        <div class="row">
+            <div class="column left" >
+                <h2>Column 1</h2>
+
+            </div>
+            <div class="column right" >
+                <h2>Logo</h2>
+
+            </div>
+        </div>
+
+
+        <!--<h1>Logo</h1>-->
     </header>
 
     <div id="menu">
